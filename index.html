@@ -281,7 +281,7 @@ function derive(p) {
     stl25: per25(p.stl, p.defPoss),
     blk25: per25(p.blk, p.defPoss),
     dreb25: per25(p.dreb, p.defPoss),
-    reb25: per25(rebounds, poss),
+    reb25: poss>0 ? per25(rebounds, poss) * 2 : null,
     plusMinus: p.offPts - p.defPts,
     op25: per25(p.offPts, p.offPoss),
     dp25: per25(p.defPts, p.defPoss),
